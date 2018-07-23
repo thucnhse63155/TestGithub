@@ -87,6 +87,15 @@ public class Cabinet {
         }
     }
 
+    public void showDetailed() {
+        if (listPet.isEmpty()) {
+            System.out.println("The document is empty . Nothing to show");
+            return;
+        }
+        for (Pet x : listPet.values()) {
+            x.showDetailed();
+        }
+    }
     public void search(String s) {
         Pet tempt = listPet.get(s);
         if (listPet.isEmpty()) {
@@ -99,7 +108,20 @@ public class Cabinet {
         }
     }
 
- 
+    public void remove1(String idRemove) {
+        Pet tempt = listPet.get(idRemove);
+        if (listPet.isEmpty()) {
+            System.out.println("Ths list is empty");
+        } else if (tempt == null) {
+            System.out.println("Not found");
+        } else {
+            listPet.remove(idRemove);
+            System.out.println("Remove sucessful");
+        }
+        for (Pet x : listPet.values()) {
+            x.showDetailed();
+        }
+    }
 
     public void upDate(String s) {
         Pet tempt = listPet.get(s);
@@ -183,4 +205,5 @@ public class Cabinet {
             }
         }
     }
+
 }
