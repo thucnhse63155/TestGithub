@@ -1,4 +1,4 @@
-/*
+﻿/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -99,20 +99,7 @@ public class Cabinet {
         }
     }
 
-    public void remove(String idRemove) {
-        Pet tempt = listPet.get(idRemove);
-        if (listPet.isEmpty()) {
-            System.out.println("Ths list is empty");
-        } else if (tempt == null) {
-            System.out.println("Not found");
-        } else {
-            listPet.remove(idRemove);
-            System.out.println("Remove sucessful");
-        }
-        for (Pet x : listPet.values()) {
-            x.showDetailed();
-        }
-    }
+ 
 
     public void upDate(String s) {
         Pet tempt = listPet.get(s);
