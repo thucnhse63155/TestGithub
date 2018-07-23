@@ -87,6 +87,15 @@ public class Cabinet {
         }
     }
 
+    public void showDetailed() {
+        if (listPet.isEmpty()) {
+            System.out.println("The document is empty . Nothing to show");
+            return;
+        }
+        for (Pet x : listPet.values()) {
+            x.showDetailed();
+        }
+    }
     public void search(String s) {
         Pet tempt = listPet.get(s);
         if (listPet.isEmpty()) {
@@ -197,13 +206,4 @@ public class Cabinet {
         }
     }
 
- public void remove(String id){
-        String name;
-        name = MyToys.getName("Input the name that you want to search");
-        for (Pet x : listPet.values()) {
-            if(x.getName().contains(name)){
-                x.showDetailed();
-            }
-        }
-    }
 }
