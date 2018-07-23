@@ -183,4 +183,14 @@ public class Cabinet {
             }
         }
     }
+
+public void searchById(){
+        String name;
+        name = MyToys.getName("Input the name that you want to search");
+        for (Pet x : listPet.values()) {
+            if(x.getName().contains(name)){
+                x.showDetailed();
+            }
+        }
+    }
 }
